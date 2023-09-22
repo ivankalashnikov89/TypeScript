@@ -1,3 +1,7 @@
 //My TypeScript Journey
 
-const age:number = 11;
+//https://www.typescriptlang.org
+
+const age:number = 33;
+const myName:string = "Ivan";
+const isMarried:boolean = false;
