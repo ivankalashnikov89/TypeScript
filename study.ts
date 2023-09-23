@@ -70,7 +70,73 @@ let personWithAddress: Person & Address;
 
 //Structural Types
 
-//Object Types
+//OBJECT TYPES
+
+//Interface
+/*Interfaces are one of the primary ways to define 
+object types in TypeScript. They allow you to specify 
+the structure of an object, including its properties 
+and their types */
+interface Person {
+  name: string;
+  age: number;
+}
+
+const i_person: Person = {
+  name: "Alice",
+  age: 30,
+};
+
+//Inline Type Annotation
+/*You can also define object types using inline type 
+annotations. This is useful when you want to define 
+an object type for a specific variable without creating 
+a separate interface */
+const you_person: { name: string; age: number } = {
+  name: "Bob",
+  age: 25,
+};
+
+//Optional Properties
+/*In TypeScript, you can make object properties optional 
+by adding a ? after the property name */
+interface Car {
+  make: string;
+  model: string;
+  year?: number; // Optional property
+}
+
+const myCar: Car = {
+  make: "Toyota",
+  model: "Camry",
+};
+
+//Readonly Properties
+/*You can make object properties read-only by using 
+the readonly keyword */
+interface Point {
+  readonly x: number;
+  readonly y: number;
+}
+
+//const origin: Point = { x: 0, y: 0 };
+/*origin.x = 5; // Error: Cannot assign to 'x' because 
+it is a read-only property.*/
+
+//Index Signature
+/*Index signatures allow you to define objects with 
+dynamic keys. */
+interface Dictionary {
+  [key: string]: number;
+}
+
+const scores: Dictionary = {
+  math: 90,
+  history: 85,
+  english: 88,
+};
+
+
 
 //Array Types
 
