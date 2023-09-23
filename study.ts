@@ -27,6 +27,45 @@ let isStudent: boolean = true;
 let someValue: null = null;
 let otherValue: undefined = undefined;
 
+//Any
+let dynamicValue: any = 42;
+
+//Void
+function logMessage(): void {
+  console.log("This function does not return a value.");
+}
+
+//Never
+function throwError(message: string): never {
+  throw new Error(message);
+}
+
+//Object
+let person: Object = { name: "Alice", age: 30 };
+
+//Array
+let numbers: number[] = [1, 2, 3];
+let names: Array<string> = ["Alice", "Bob"];
+
+//Union
+let result: number | string;
+result = 42; // Valid
+result = "Hello"; // Valid
+
+//Intersection
+interface Person {
+  name: string;
+}
+
+interface Address {
+  address: string;
+}
+
+let personWithAddress: Person & Address;
+
+
+
+
 //Assigning Types
 
 //Structural Types
