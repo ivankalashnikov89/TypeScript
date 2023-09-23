@@ -13,7 +13,19 @@ enhanced code navigation and autocompletion, and is
 widely used for building scalable and maintainable web 
 and software applications. */
 
-//TypeScript Data Types
+//TYPESCRIPT DATA TYPES
+//Number
+let yourAge: number = 30;
+
+//String
+let yourName: string = "Alice";
+
+//Boolean
+let isStudent: boolean = true;
+
+//Null and Undefined
+let someValue: null = null;
+let otherValue: undefined = undefined;
 
 //Assigning Types
 
