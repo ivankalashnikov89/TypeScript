@@ -204,7 +204,41 @@ let point: Coordinate = [3, 4]; // Valid
 
 
 
-//Enum Types
+//ENUM TYPES
+//Defining an Enum
+enum Color {
+  Red,
+  Green,
+  Blue,
+}
+
+//Accessing Enum Members
+let favoriteColor: Color = Color.Blue;
+console.log(favoriteColor); // Outputs: 2
+
+//Custom Enum Values
+enum Direction {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT",
+}
+
+//Reversle Mapping
+/*Enums in TypeScript also support reverse mapping. 
+You can convert enum values to their associated names 
+using the enum itself*/
+let colorName: string = Color[2]; // Converts 2 to "Blue"
+
+//Enum Iteration
+/*You can iterate over the members of an enum using 
+for...in or for...of loops */
+for (let color in Color) {
+  console.log(color); // Outputs: "Red", "Green", "Blue"
+}
+
+
+
 
 //Any Types
 
