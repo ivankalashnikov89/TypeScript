@@ -175,7 +175,34 @@ const colors = ["red", "green", "blue"] as const;
 //colors[0] = "purple"; // Error: Cannot assign to '0' because it is a read-only property.
 
 
-//Tuple Types
+//TUPLE TYPES
+/*In TypeScript, tuple types allow you to define arrays 
+with a fixed number of elements, where each element may 
+have a different type. Unlike regular arrays, tuple types
+enforce a specific order and type for each element in 
+the tuple. Tuple types are defined by specifying the 
+types of each element in a specific order within square 
+brackets */
+
+//Declaring Tuple Types
+let i_Person: [string, number] = ["Alice", 30];
+
+//Accessing Elements
+let my_name: string = i_Person[0]; // Accessing the first element (string)
+let my_age: number = i_Person[1];  // Accessing the second element (number)
+
+//Modifying Tuple Elements
+i_Person[0] = "Bob";   // Valid, as the first element is of type string
+i_Person[1] = 25;      // Valid, as the second element is of type number
+
+//Tuple Type Constraints
+/*You can define more complex tuple types with specific constraints using union 
+types, literal types, or other custom types */
+type Coordinate = [number, number];
+let point: Coordinate = [3, 4]; // Valid
+//let invalidPoint: Coordinate = [3, "4"]; // Error: Type '"4"' is not assignable to type 'number'
+
+
 
 //Enum Types
 
