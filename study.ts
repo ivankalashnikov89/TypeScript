@@ -138,7 +138,12 @@ const scores: Dictionary = {
 
 
 
-//Array Types
+//ARRAY TYPES
+//Array Type Annotation
+let numberss: number[] = [1, 2, 3, 4, 5];
+let list_of_names: string[] = ["Alice", "Bob", "Charlie"];
+
+
 
 //Tuple Types
 
