@@ -238,11 +238,51 @@ for (let color in Color) {
 }
 
 
+//ANY TYPES
 
 
-//Any Types
+//UNION TYPES
+/*In TypeScript, a union type allows you to specify that 
+a variable, parameter, or return value can have one of 
+several specified types. Union types are formed by using 
+the | (pipe) symbol to separate the possible types. 
+This means a variable with a union type can hold a value 
+of any of the specified types. Union types are particularly 
+useful when you want to work with values that can be of 
+different types but still maintain type safety. */
 
-//Uniion Types
+//Declaring a Union Type
+let Iage: number | string;
+Iage = 30; // Valid assignment (number)
+Iage = "Thirty"; // Valid assignment (string)
+
+//Using Union Types in Function Parameters and Return Types
+function formatInput(input: number | string): string {
+  return `Formatted: ${input}`;
+}
+
+const result1: string = formatInput(42); // Valid
+const result2: string = formatInput("Hello"); // Valid
+
+//Using Union Types with Array
+let values: (number | string)[] = [1, "two", 3, "four"];
+
+//Combining Different Data Types
+type Result = number | boolean;
+let answer: Result = 42; // Valid assignment (number)
+answer = true; // Valid assignment (boolean)
+
+//Using Union Types with Object Properties
+interface iPerson {
+  name: string;
+  mYage: number | null;
+}
+
+const alice: iPerson = {
+  name: "Alice",
+  mYage: null, // Valid, age can be a number or null
+};
+
 
 //Literal Ty[es
 
