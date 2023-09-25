@@ -143,6 +143,20 @@ const scores: Dictionary = {
 let numberss: number[] = [1, 2, 3, 4, 5];
 let list_of_names: string[] = ["Alice", "Bob", "Charlie"];
 
+//Generic Array Type
+/*You can use a generic array type by using the Array<T> 
+syntax, where T represents the type of elements in the 
+array */
+let scoress: Array<number> = [85, 90, 78];
+let fruits: Array<string> = ["apple", "banana", "cherry"];
+
+//Readonly Arrays
+/*You can make an array read-only by using the readonly keyword 
+in combination with the array type */
+const readOnlyNumbers: readonly number[] = [1, 2, 3];
+//eadOnlyNumbers.push(4); // Error: Property 'push' does not exist on type 'readonly number[]'.
+
+
 
 
 //Tuple Types
