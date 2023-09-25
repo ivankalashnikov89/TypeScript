@@ -154,9 +154,25 @@ let fruits: Array<string> = ["apple", "banana", "cherry"];
 /*You can make an array read-only by using the readonly keyword 
 in combination with the array type */
 const readOnlyNumbers: readonly number[] = [1, 2, 3];
-//eadOnlyNumbers.push(4); // Error: Property 'push' does not exist on type 'readonly number[]'.
+//eadOnlyNumbers.push(4); // Error: Property 'push' does not 
+//exist on type 'readonly number[]'.
 
+//Tuple Types
+/*Tuple types allow you to define arrays with a fixed 
+number of elements, where each element may have a 
+different type. Tuple types are defined by specifying 
+the types of each element in a specific order */
+let iPerson: [string, number] = ["Alice", 30];
 
+//Array of Union Types
+/*You can create arrays that can hold values of multiple 
+types using union types. */
+let mixedValues: (string | number)[] = ["Alice", 30, "Bob", 25];
+
+// Readonly Arrays with as const
+/*Using as const ensures that the array is treated as read-only */
+const colors = ["red", "green", "blue"] as const;
+//colors[0] = "purple"; // Error: Cannot assign to '0' because it is a read-only property.
 
 
 //Tuple Types
