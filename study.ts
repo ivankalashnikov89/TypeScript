@@ -325,6 +325,55 @@ the parameters' types and the return type of a function.
 TypeScript provides several ways to define function 
 types */
 
+//Function Parameter and Return Type Annotations
+/*We can annotate a function's parameter types and 
+return type using : followed by the type */
+function addd(a: number, b: number): number {
+    return a + b;
+}
+
+//Function Types Alias
+/* You can use type aliases to create reusable function types:*/
+type MathOperation = (a: number, b: number) => number;
+const add: MathOperation = (a, b) => a + b;
+
+//Function Types with Optional Parameters
+/*You can specify optional parameters in function 
+types using ? */
+type PrintMessage = (message: string, times?: number) => void;
+
+const printt: PrintMessage = (message, times) => {
+    if (times === undefined) {
+        console.log(message);
+    } else {
+        for (let i = 0; i < times; i++) {
+            console.log(message);
+        }
+    }
+};
+
+//Function Types with Rest Parameters
+/*You can specify rest parameters in function types 
+using the rest syntax ... */
+type ConcatenateStrings = (...strings: string[]) => string;
+const concatenate: ConcatenateStrings = (...strings) => strings.join("");
+
+//Function Types as Parameters:
+/*You can use function types as parameters to other functions: */
+type MathOperationn = (a: number, b: number) => number;
+
+function applyOperation(operation: MathOperation, a: number, b: number): number {
+    return operation(a, b);
+}
+
+//row Function Type Inference:
+/*TypeScript can often infer the function type from 
+arrow functions*/
+const multiply = (a: number, b: number) => a * b;
+
+
+
+
 
 //Interfaces
 
