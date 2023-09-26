@@ -562,6 +562,58 @@ perform actions related to the class. In the Person
 class, greet is a method. You can call methods on class 
 instances (person1.greet()). */
 
+//Access Modifiers
+/*TypeScript supports access modifiers like public, 
+private, and protected. These modifiers control 
+the visibility of class members.
+-public: Members are accessible from anywhere.
+-private: Members are only accessible within the class.
+-protected: Members are accessible within the class and 
+its subclasses. */
+class Studentt {
+    private studentID: string;
+
+    constructor(name: string, age: number, studentID: string) {
+        // ...
+    }
+
+    getStudentID() {
+        return this.studentID; // Accessible within the class
+    }
+}
+
+//INHERITANCE
+/*TypeScript supports class inheritance, where you can 
+create a new class (subclass or derived class) that 
+inherits properties and methods from an existing class 
+(base class or parent class). This is achieved using 
+the extends keyword. */
+class Studenttt extends Person {
+    constructor(name: string, age: number, studentID: string) {
+        super(name, age); // Call the constructor of the parent class
+        this.studentID = studentID;
+    }
+
+    study() {
+        console.log(`${this.name} is studying.`);
+    }
+}
+
+//Static Members
+/*You can define static properties and methods that 
+belong to the class itself, not to instances of the 
+class. Static members are accessed using the class name, 
+not instances. */
+class MathUtils {
+    static pi = 3.14159;
+
+    static calculateCircleArea(radius: number): number {
+        return this.pi * radius * radius;
+    }
+}
+
+console.log(MathUtils.calculateCircleArea(5)); // Calling a static method
+
 
 //
 
