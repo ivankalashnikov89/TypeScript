@@ -366,17 +366,93 @@ function applyOperation(operation: MathOperation, a: number, b: number): number 
     return operation(a, b);
 }
 
-//row Function Type Inference:
+//Arrow Function Type Inference:
 /*TypeScript can often infer the function type from 
 arrow functions*/
 const multiply = (a: number, b: number) => a * b;
 
 
 
+//INTERFACES
+/*n TypeScript, interfaces are a powerful way to define 
+the shape or contract of an object. They specify which 
+properties and methods an object should have. Interfaces 
+are a fundamental concept in TypeScript and are widely 
+used to achieve type checking and code structure in a 
+consistent manner */
+
+//Defining an Interface
+/*To define an interface, you use the interface keyword 
+followed by the interface's name. Inside the interface, 
+you declare the properties and methods the object should 
+have */
+interface Person {
+    name: string;
+    age: number;
+  }
+
+//Implementing an Interface
+/*You can use an interface to define the structure of 
+objects. When a class or object implements an interface, 
+it must adhere to the contract specified by the interface. 
+Here's how you can implement the Person interface */
+class Student implements Person {
+    constructor(public name: string, public age: number) {}
+  }
+  
+  const student1: Person = new Student("Alice", 25);
+
+//Optional Properties
+/*You can make properties optional in an interface by using 
+the ? symbol */
+interface Dog {
+    name: string;
+    age?: number;
+  }
+
+//Readonly Properties
+interface Circle {
+    readonly radius: number;
+  }
+  
+  const myCircle: Circle = { radius: 5 };
+  //myCircle.radius = 10; // Error: Cannot 
+  //assign to 'radius' because it is a read-only property.
+  
+ //Function Signature
+ interface Calculator {
+    add(x: number, y: number): number;
+  }
+   
+//Extending Interface
+/*ou can extend interfaces to create new interfaces that 
+inherit properties and methods */ 
+interface Animal {
+    name: string;
+  }
+  
+  interface Dog extends Animal {
+    breed: string;
+  }
+
+//Implementing Multiple Interfaces
+/*A class or object can implement multiple interfaces by 
+separating them with commas */  
+interface Person {
+    name: string;
+  }
+  
+  interface Age {
+    age: number;
+  }
+  
+  class User implements Person, Age {
+    constructor(public name: string, public age: number) {}
+  }
+  
 
 
-//Interfaces
-
+  
 //Modules
 
 //Classes
