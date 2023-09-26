@@ -452,8 +452,42 @@ interface Person {
   
 
 
-  
-//Modules
+
+//MODULES
+/*In TypeScript, modules are a way to organize and 
+structure your code by encapsulating related code into 
+separate units. TypeScript supports several module 
+systems, including CommonJS, AMD, SystemJS, and ES6 
+modules. The choice of module system depends on your 
+project's environment and requirements. */
+
+//CommonJS Modules
+/*CommonJS is a module system commonly used in Node.js 
+applications. You can use CommonJS modules in TypeScript 
+by using the require keyword to import modules and module.
+exports to export them */
+// Importing a module
+//const fs = require('fs');
+
+// Exporting a module
+/*module.exports = {
+    someFunction: () => {
+        // ...
+    }
+};*/
+
+//ES6 Modules
+/*ES6 modules are the standard for organizing code in 
+modern JavaScript and TypeScript. You can use ES6 module 
+syntax in TypeScript by using import and export statements.*/
+// Importing a module
+import { someFunction } from './myModule';
+
+// Exporting a module
+export function someFunction() {
+    // ...
+}
+
 
 //Classes
 
