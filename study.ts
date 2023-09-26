@@ -283,8 +283,22 @@ const alice: iPerson = {
   mYage: null, // Valid, age can be a number or null
 };
 
+//Checking for Union Types
+/*You can use type guards or conditional checks to 
+narrow down the type when working with union types */
+function isNumberOrString(input: number | string): boolean {
+    return typeof input === "number" || typeof input === "string";
+  }
+  
+  let value: number | string = 42;
+  if (isNumberOrString(value)) {
+    // Inside this block, value is narrowed down to number | string
+    console.log(value.toFixed(2)); // Valid (if value is a number)
+  }
+  
 
-//Literal Ty[es
+//LITERAL TYPES
+
 
 //Function Types
 
