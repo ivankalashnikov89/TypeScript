@@ -508,7 +508,60 @@ import { someFunction } from './myNamespace';
 someFunction();
 
 
-//Classes
+//CLASSES
+/*Certainly! TypeScript classes are a fundamental part 
+of object-oriented programming in TypeScript. They allow 
+you to define blueprints for objects, encapsulate data 
+and behavior, and create instances of objects based on 
+those blueprints */
+
+//Class Declaration
+/*You declare a class using the class keyword followed 
+by the class name. Inside the class, you define 
+properties and methods */
+class Person {
+    // Properties
+    name: string;
+    age: number;
+
+    // Constructor
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Methods
+    greet() {
+        console.log(`Hello, my name is ${this.name}, and I'm ${this.age} years old.`);
+    }
+}
+
+//Constructor
+/*The constructor method is a special method used for 
+initializing the properties of an object when an 
+instance of the class is created. In the example above, 
+the Person class has a constructor that takes two 
+parameters (name and age) and assigns them to the 
+corresponding properties. */
+
+//Creating Instances
+/*You can create instances of a class using the new 
+keyword */
+const person1 = new Person("Alice", 25);
+const person2 = new Person("Bob", 30);
+
+//Properties
+/*Properties are variables that hold data for objects. 
+In the Person class, name and age are properties. 
+You can access and modify them using dot notation 
+(person1.name or person1.age). */
+
+//Methods
+/*Methods are functions defined within a class that 
+perform actions related to the class. In the Person 
+class, greet is a method. You can call methods on class 
+instances (person1.greet()). */
+
 
 //
 
