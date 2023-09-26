@@ -298,10 +298,32 @@ function isNumberOrString(input: number | string): boolean {
   
 
 //LITERAL TYPES
+/*In TypeScript, literal types allow you to specify exact values 
+that a variable or parameter can hold. Literal types 
+restrict the possible values to a specific set of 
+constants or literals. Literal types are often used to 
+create more precise types that represent specific values */
+//String Literal Types
+let day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" = "Monday";
+
+//Numeric Literal Types
+let statusCode: 200 | 400 | 404 | 500 = 200;
+
+//Boolean Literal Types
+let isAdmin: true = true;
+
+//Custom Literal Types
+type Gender = "Male" | "Female" | "Non-Binary";
+let personGender: Gender = "Male";
 
 
-//Function Types
 
+//FUNCTION TYPES
+/*In TypeScript, you can specify the types of 
+functions using function types. Function types define 
+the parameters' types and the return type of a function. 
+TypeScript provides several ways to define function 
+types */
 
 
 //Interfaces
