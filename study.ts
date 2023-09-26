@@ -488,6 +488,25 @@ export function someFunction() {
     // ...
 }
 
+//Namespace Modules
+/*TypeScript also supports namespace modules, which 
+allow you to group related code under a common namespace. 
+Namespace modules can be useful for organizing code, 
+but they are less commonly used compared to CommonJS 
+and ES6 modules */
+// Defining a namespace
+namespace MyNamespace {
+    export function someFunction() {
+        // ...
+    }
+}
+
+// Importing from a namespace
+import { someFunction } from './myNamespace';
+
+// Using the imported function
+someFunction();
+
 
 //Classes
 
