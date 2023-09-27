@@ -614,6 +614,25 @@ class MathUtils {
 
 console.log(MathUtils.calculateCircleArea(5)); // Calling a static method
 
+//Abstract classes
+/*Abstract classes are classes that cannot be 
+instantiated directly. They serve as base classes 
+for other classes and may include abstract methods 
+that must be implemented by their subclasses. */
+abstract class Shape {
+    abstract getArea(): number;
+}
+
+class Circle extends Shape {
+    constructor(private radius: number) {
+        super();
+    }
+
+    getArea() {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+
 
 //
 
